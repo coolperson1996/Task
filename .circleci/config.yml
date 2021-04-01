@@ -1,0 +1,12 @@
+import numpy as np
+import pandas as pd
+import json
+import csv
+f=open('orders_data.json')
+f
+data = json.load(f)
+data
+customer={'CustomerID':[print(data['items'][0]['customer_id'])],'First_Name':[print(data['items'][0]['customer_firstname'])],'Last_Name':[print(data['items'][0]['customer_lastname'])],'Customer_phone':[print(data['items'][1]['billing_address']['telephone'])],'Customer email':[print(data['items'][0]['customer_email'])]}
+customer_Address={'CustomerID':[print(data['items'][0]['customer_id'])],'AddressID':[print(data['items'][0]['billing_address_id'])],'Address_type':[print(data['items'][1]['billing_address']['address_type'])],'Street':[print(data['items'][1]['billing_address']['street'])],'City':print(data['items'][1]['billing_address']['city']),'Region':print(data['items'][1]['billing_address']['region']),'country':print(data['items'][1]['billing_address']['country_id']),'postcode':print(data['items'][1]['billing_address']['postcode'])}
+customer_order_details={'Order_id':[print(data['items'][0]['items'][0]['order_id'])],'product_id':print(data['items'][0]['items'][0]['product_id']),'product_type':print(data['items'][0]['items'][0]['product_type']),'sku':print(data['items'][0]['items'][0]['sku']),'grand_total':print(data['items'][0]['grand_total']),'order_quantity':print(data['items'][0]['total_qty_ordered']),'any_discount':[print(data['items'][0]['items'][0]['no_discount'])],'price-discount':print(data['items'][0]['base_discount_amount'])}
+Customer_order_master={'Order_id':[print(data['items'][0]['items'][0]['order_id'])],'CustomerID':[print(data['items'][0]['customer_id'])],'Order_date':[print(data['items'][0]['updated_at'])],'Total_quantity':[print(data['items'][0]['total_qty_ordered'])],'grand_total':print(data['items'][0]['grand_total']),'Total_paid':print(data['items'][0]['total_paid']),'order_status':print(data['items'][0]['status'])}
